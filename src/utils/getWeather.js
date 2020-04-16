@@ -6,7 +6,7 @@ const getWeather = ({ location, name }) => {
     .get(url)
     .then(( {data: {current} } = {} ) => {
       return {
-        forecast: `It is currently ${current.temperature} degrees in ${name}. There is a ${current.precip} chance of rain.`,
+        forecast: `${current.weather_descriptions}. Currently ${current.temperature} degrees with a ${current.precip} chance of rain.`,
         location: name,
       }
     })
