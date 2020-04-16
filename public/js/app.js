@@ -4,7 +4,7 @@ const message1 = document.getElementById("error");
 const message2 = document.getElementById("forecast");
 
 const getWeatherOnClick = (address) => {
-  const url = `http://localhost:3000/weather?address=${address}`
+  const url = `/weather?address=${address}`
   fetch(url)
     .then(response => {
       if (response.ok && response.status === 200) {
